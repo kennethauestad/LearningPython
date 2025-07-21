@@ -3,8 +3,11 @@ from flask import Flask, render_template # importerer Flask og render_template f
 app = Flask(__name__)  
 @app.route("/")
 
-def hei():
-    return "Hei Per, velkommen til Flask!"
+def hjem():
+    return render_template("index.html")
+
+#def hei():
+#    return "Hei Per, velkommen til Flask!"
 
 if __name__ == "__main__":
     app.run()
